@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package tutorial;
+
+
+option go_package = "github.com/your-username/your-project/generated/person";
+
+message Person {
+  string name = 1;
+  int32 id = 2;
+  string email = 3;
+}

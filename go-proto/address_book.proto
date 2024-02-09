@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package tutorial;
+
+import "person.proto";
+
+option go_package = "github.com/your-username/your-project/generated/person";
+
+message AddressBook {
+  repeated Person people = 1;
+}
