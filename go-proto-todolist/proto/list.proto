@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package todo_list;
+
+import "google/protobuf/timestamp.proto";
+import "item.proto";
+
+option go_package = "go-proto-todolist/lib/todo_list";
+
+message List {
+  string title = 1;
+  repeated todo_item.Item items = 2;
+  google.protobuf.Timestamp create_at = 6;
+  google.protobuf.Timestamp update_at = 7;
+}
