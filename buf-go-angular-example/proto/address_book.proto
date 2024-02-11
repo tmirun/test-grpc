@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package tutorial;
+
+import "person.proto";
+
+option go_package = "go-server/internal/address_book";
+
+message AddressBook {
+  repeated Person people = 1;
+}
