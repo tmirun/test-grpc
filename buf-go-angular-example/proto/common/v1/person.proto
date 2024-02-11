@@ -2,10 +2,23 @@ syntax = "proto3";
 
 package common.v1;
 
-option go_package = "go-server/internal/person";
+service PersonService {
+  rpc Create(CreateRequest) returns (CreateResponse);
+}
+
+message CreateRequest {
+  string name = 2;
+  string email = 3;
+}
+
+message CreateResponse {
+  int32 id = 1;
+  string name = 2;
+  string email = 3;
+}
 
 message Person {
-  string name = 1;
-  int32 id = 2;
+  int32 id = 1;
+  string name = 2;
   string email = 3;
 }

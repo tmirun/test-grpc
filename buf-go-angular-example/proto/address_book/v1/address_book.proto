@@ -4,8 +4,6 @@ package address_book.v1;
 
 import "common/v1/person.proto";
 
-option go_package = "go-server/internal/address_book";
-
 message AddressBook {
   repeated common.v1.Person people = 1;
 }
