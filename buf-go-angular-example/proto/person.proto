@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package tutorial;
+package common;
 
 option go_package = "go-server/internal/person";
 
