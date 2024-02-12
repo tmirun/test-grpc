@@ -5,6 +5,14 @@ import "google/protobuf/timestamp.proto";
 
 option go_package = "lib/pb";
 
+service UserService {
+  rpc Create(User) returns (User);
+}
+
+message CreateRequest {
+  string name = 1;
+}
+
 message User {
   enum UserStatus {
     UnKnown = 0;
