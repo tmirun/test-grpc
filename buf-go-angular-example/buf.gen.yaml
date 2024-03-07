@@ -10,3 +10,11 @@ plugins:
   - plugin: buf.build/connectrpc/go
     out: gen
     opt: paths=source_relative
+  - plugin: es # This will invoke protoc-gen-es and write output to src/gen
+    out: webapp/src/gen
+    opt: # Add more plugin options here
+      - target=ts
+  - plugin: connect-es # This will invoke protoc-gen-connect-es
+    out: webapp/src/gen
+    opt:
+      - target=ts # Add more plugin options here
